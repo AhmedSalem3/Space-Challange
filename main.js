@@ -57,7 +57,6 @@ function modifyImages() {
   const images = document.querySelectorAll("img");
   images.forEach((image) => {
     image.alt == "" ? (image.alt = "Image") : "";
-    console.log(image.alt);
   });
 }
 modifyImages();

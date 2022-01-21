@@ -31,11 +31,6 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-body {
-  position: relative;
-  overflow-y: visible;
-  overflow-x: hidden;
-}
 
 body.menu-active {
   overflow: hidden;
@@ -202,14 +197,10 @@ header .menu-toggle.active span:nth-child(3) {
     z-index: 2200;
   }
   header nav {
-    transition: transform 0.5s;
-    transform: translateX(100%);
+    transition: all 0.5s;
     position: absolute;
-
     top: -25px;
     right: 0;
-    /* height: 100%; */
-    width: 50%;
     flex-direction: column;
     z-index: 1100;
     background: #ffffff26;
@@ -217,9 +208,13 @@ header .menu-toggle.active span:nth-child(3) {
     padding: 81px 0 0 30px;
     height: 795px;
     align-items: baseline;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
   }
   header nav.active {
-    transform: translateX(0);
+    opacity: 1;
+    width: 50%;
   }
 }
 @media (min-width: 992px) {
