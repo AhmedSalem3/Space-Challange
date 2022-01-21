@@ -35,6 +35,7 @@ img {
 
 body.menu-active {
   overflow: hidden;
+  height: 100%;
 }
 .temp {
   padding-top: var(--sec-padding);
@@ -55,7 +56,7 @@ body.menu-active {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: auto) {
   .container {
     width: 1170px;
   }
@@ -224,7 +225,7 @@ header .menu-toggle.active span:nth-child(3) {
     background: #ffffff26;
     backdrop-filter: blur(20px);
     padding: 81px 0 0 30px;
-    height: 795px;
+    height: auto;
     align-items: baseline;
     width: 0;
     overflow: hidden;

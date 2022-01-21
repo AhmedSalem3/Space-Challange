@@ -1,7 +1,7 @@
 function menu() {
   const menuBtn = document.querySelector(".menu-toggle");
   const menu = document.querySelector("header nav");
-
+  menu.style.height = `${window.innerHeight}px`;
   menuBtn.addEventListener("click", toggleMenu);
 
   function toggleMenu() {
