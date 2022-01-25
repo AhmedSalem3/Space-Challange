@@ -1,7 +1,9 @@
 function menu() {
   const menuBtn = document.querySelector(".menu-toggle");
   const menu = document.querySelector("header nav");
-  menu.style.height = `${window.innerHeight}px`;
+
+  window.addEventListener("resize", resizeNav);
+
   menuBtn.addEventListener("click", toggleMenu);
 
   function toggleMenu() {
@@ -11,6 +13,17 @@ function menu() {
   }
 }
 menu();
+
+function resizeNav() {
+  const menu = document.querySelector("header nav");
+
+  if (window.innerWidth <= 991) {
+    menu.style.height = `${window.innerHeight}px`;
+  } else {
+    menu.style.height = "unset";
+  }
+}
+resizeNav();
 
 function Links() {
   let allLinks = document.querySelectorAll("header a");
